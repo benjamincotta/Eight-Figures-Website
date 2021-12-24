@@ -1,0 +1,192 @@
+@import 'config';
+@import 'footer';
+@import 'home-mobile';
+@import 'nav';
+
+// *,
+// *::before,
+// *::after {
+//   outline: 1px red solid !important;
+//   visibility: visible !important;
+// }
+
+header {
+  position: relative;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  background-image: url(/assets/media/about/about-background.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    position: relative;
+    z-index: 2;
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $main-font;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+  }
+}
+
+h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: $primary;
+  font-family: $main-font;
+}
+
+p,
+h3 {
+  font-family: $main-font;
+}
+
+.about-info {
+  padding: 4em 0;
+
+  .col-md-12 {
+    margin: 4em 0;
+
+    p {
+      font-size: 2em;
+      margin: 0;
+    }
+  }
+}
+
+.passion {
+  font-size: 2em;
+  padding: 0 1em;
+}
+
+.about-image {
+  width: 30%;
+  padding: 0.6em;
+}
+
+.call-to-action {
+  height: 80vh;
+
+  h5 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: $gray-600;
+  }
+
+  .h5-top-margin {
+    margin-top: 5em;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 1em;
+    font-size: 1.4em;
+    color: $gray-400;
+    letter-spacing: 20;
+    transition: 1s;
+  }
+
+  .padding-left {
+    padding-left: 2em;
+  }
+  .hover-shift {
+    a:hover {
+      margin-right: 1.7em;
+      transition: 1s;
+    }
+  }
+}
+
+// MEDIA QUERIES ---------------------------------------------------------------------------
+
+@media (max-width: 768px) {
+  .about-info {
+    .col-md-12 {
+      padding: 0 2em;
+      margin: 2em 0;
+    }
+  }
+  .passion {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    background-image: url(/assets/media/about/about-background-mobile.jpg);
+  }
+
+  .about-info {
+    .col-md-12 {
+      padding: 0;
+      margin: 2em 0;
+      p {
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  .passion {
+    font-size: 1.2em;
+  }
+
+  .about-image {
+    width: 80%;
+  }
+
+  .call-to-action {
+    .padding-left {
+      padding-left: 1em;
+    }
+  }
+  .hover-shift {
+    a:hover {
+      margin-right: 1em;
+      transition: none;
+    }
+  }
+  .margin-applied {
+    margin-top: 2em;
+  }
+
+  .hide-on-mob {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .call-to-action {
+    .h5-top-margin {
+      margin-top: 3em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+  }
+  .margin-applied {
+    margin-top: 2em;
+  }
+}
+
+// @media (max-width: 320px) {
+
+// }

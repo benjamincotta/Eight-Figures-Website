@@ -1,0 +1,20 @@
+// general
+* {
+  list-style: none;
+  font-display: swap;
+}
+
+// my theme colors
+$cyan: #2fdac6;
+$pink: #d63384;
+$black: #000;
+
+$primary: $cyan;
+$secondary: $pink;
+$dark: $black;
+
+// fonts
+
+$main-font: 'Work Sans', sans-serif;
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';

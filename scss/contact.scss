@@ -1,0 +1,100 @@
+@import 'config';
+@import 'home-mobile';
+@import 'nav';
+
+// *,
+// *::before,
+// *::after {
+//   outline: 1px red solid !important;
+//   visibility: visible !important;
+// }
+
+header {
+  position: relative;
+  height: 15vh;
+  //   min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 2;
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $main-font;
+      font-weight: 600;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+  }
+}
+
+form {
+  .form-floating > .form-control {
+    background-color: #000;
+    border-radius: 0;
+  }
+  .d-grid {
+    display: flex;
+    justify-content: center;
+    button {
+      color: #000;
+      background-color: $primary;
+      border: 1px solid $primary;
+      border-radius: 0;
+      font-family: $main-font;
+
+      &:hover {
+        background-color: #000;
+        border: 1px solid #fff;
+        color: #fff;
+      }
+    }
+  }
+}
+
+li a:hover {
+  color: #fff;
+}
+
+li a {
+  margin: 0;
+}
+
+label {
+  color: #fff;
+}
+
+#status.success {
+  color: #fff;
+  animation: status 4s ease forwards;
+}
+#status.error {
+  color: rgb(255, 0, 0);
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

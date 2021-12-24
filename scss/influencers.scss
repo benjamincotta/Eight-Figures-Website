@@ -1,0 +1,294 @@
+@import 'config';
+@import 'footer';
+@import 'home-mobile';
+@import 'nav';
+
+// *,
+// *::before,
+// *::after {
+//   outline: 1px red solid !important;
+//   visibility: visible !important;
+// }
+
+header {
+  position: relative;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  background-image: url(/assets/media/influencers/influencer-black-background.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .container {
+    position: relative;
+    z-index: 2;
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $main-font;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+  }
+}
+
+.section-1 {
+  .main-row {
+    margin: 10em 0;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 2em;
+    font-weight: 300;
+  }
+  p {
+    font-size: 1.2em;
+  }
+}
+
+main {
+  .row {
+    .image-container {
+      position: relative;
+      background-color: #000;
+      height: 50%;
+
+      .img {
+        height: 100%;
+        z-index: -1;
+      }
+      .box-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+
+        p {
+          font-size: 2em;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .box-3 {
+    height: 50%;
+    height: 50%;
+    .boxed {
+      padding: 2em;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-family: $main-font;
+    font-weight: 600;
+  }
+
+  .gray-img {
+    filter: grayscale(100%);
+  }
+}
+
+.box-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+
+  .inside-img {
+    border-radius: 15px;
+  }
+}
+
+.container-fluid {
+  .row {
+    .col-md-4 {
+      p {
+        margin-bottom: 3em;
+      }
+    }
+  }
+}
+
+.row-max-height {
+  height: 100vh;
+}
+
+.large-p {
+  font-size: 2.8em;
+}
+
+.call-to-action {
+  height: 80vh;
+
+  h5 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: $gray-600;
+  }
+
+  .h5-top-margin {
+    margin-top: 5em;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 1em;
+    font-size: 1.4em;
+    color: $gray-400;
+    letter-spacing: 20;
+    transition: 1s;
+  }
+
+  .padding-left {
+    padding-left: 2em;
+  }
+  .hover-shift {
+    a:hover {
+      margin-right: 1.7em;
+      transition: 1s;
+    }
+  }
+}
+
+// MEDIA QUERIES ---------------------------------------------------------------------------
+
+@media (max-width: 768px) {
+  .large-p {
+    font-size: 1.8em;
+    p {
+      padding: 2em;
+      margin: 0;
+    }
+  }
+  .row-max-height {
+    height: auto;
+  }
+}
+
+@media (max-width: 425px) {
+  .section-1 {
+    .main-row {
+      margin: 4em 0;
+    }
+  }
+
+  .boxed {
+    margin: 2em 0;
+  }
+
+  .margin-applied {
+    margin-top: 2em;
+  }
+
+  main {
+    .row {
+      .image-container {
+        .box-overlay {
+          p {
+            font-size: 1.2em;
+            width: 100vw;
+            padding: 0 2em;
+          }
+        }
+      }
+    }
+  }
+  .hide-img {
+    display: none;
+  }
+
+  .container-fluid {
+    .row {
+      .col-md-4 {
+        p {
+          margin: 0em;
+        }
+      }
+    }
+  }
+  .large-p {
+    font-size: 1.8em;
+    p {
+      padding: 1em;
+    }
+  }
+
+  .hide-on-mob {
+    display: none;
+  }
+
+  .call-to-action {
+    .padding-left {
+      padding-left: 1em;
+    }
+  }
+  .hover-shift {
+    a:hover {
+      margin-right: 1em;
+      transition: none;
+    }
+  }
+  blockquote {
+    padding: 0 2em;
+  }
+}
+
+@media (max-width: 375px) {
+  .margin-applied {
+    margin-top: 2em;
+  }
+
+  .call-to-action {
+    .h5-top-margin {
+      margin-top: 3em;
+    }
+
+    a {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .margin-applied {
+    margin-top: 2em;
+  }
+
+  .boxed {
+    margin: 0;
+  }
+  .call-to-action {
+    a {
+      font-size: 0.9em;
+    }
+  }
+}
