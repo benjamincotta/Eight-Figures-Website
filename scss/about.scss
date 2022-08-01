@@ -31,6 +31,9 @@ header {
       text-transform: uppercase;
       font-family: $main-font;
     }
+    span {
+      color: $cyan;
+    }
   }
 
   .overlay {

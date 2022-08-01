@@ -22421,6 +22421,10 @@ form .d-grid button:hover {
   color: #fff;
 }
 
+input, textarea {
+  color: #2fdac6 !important;
+}
+
 li a:hover {
   color: #fff;
 }

@@ -22447,6 +22447,9 @@ header .container h1, header .container .h1 {
   text-transform: uppercase;
   font-family: "Work Sans", sans-serif;
 }
+header .container span {
+  color: #2fdac6;
+}
 header .overlay {
   position: absolute;
   top: 0;
